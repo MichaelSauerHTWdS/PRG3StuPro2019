@@ -5,7 +5,8 @@
  */
 
 /**
- *
+ * Just to say hello to the project
+ * @date 20190516
  * @author mike
  */
 public class HelloKontor {
