@@ -5,13 +5,13 @@
  */
 
 /**
- * Just to say hello to the project
- * @date 20190516
- * @author mike
+ * Just to say hello to the project with the HelloKontor-Class
+ * @par msa-16.05.2019
+ * @author msa
  */
 public class HelloKontor {
     public static void main(String args[]){
-        System.out.println("HelloKontor");
+        System.out.println("Hello Kontor!");
     }
     
 }
