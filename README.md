@@ -5,7 +5,7 @@ Eine explizite Aufgabenverteilung unter den Beteiligten ist dabei nicht vorgeseh
 
 ## Aufgaben
 
-Klasse Konto
+Klasse Konto: mareuter
 
 Klasse Ware: phbarth
 
