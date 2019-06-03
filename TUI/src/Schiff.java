@@ -6,8 +6,8 @@
 public class Schiff
 {
 	private int zustand;				// Zustand des Schiffs 0 - 100
-	private final int max_kapazitaet;	// Maximale Kapazität des Schiffs, entschieden durch Typ
-	private final Typ schiffstyp;
+	private int max_kapazitaet;	// Maximale Kapazität des Schiffs, entschieden durch Typ
+	private Typ schiffstyp;
 	
 	public static enum Typ
 	{
@@ -27,11 +27,11 @@ public class Schiff
 	
 	}
 	
-	private static int getKapazitaet(Typ Schiffstyp)
+	private static int getKapazitaet(Typ schiffstyp)
 	{
 		int kapazitaet = -1;
 		
-		switch(Schiffstyp)
+		switch(schiffstyp)
 		{
 			case SCHNIGGE:		kapazitaet = 40;
 								break;
@@ -48,5 +48,45 @@ public class Schiff
 		}
 		
 		return kapazitaet;
+	}
+	
+	public static String getTypString(Typ schiffstyp)
+	{
+		String s = "";
+		
+		switch(schiffstyp)
+		{
+			case SCHNIGGE:		s = "Schnigge";
+								break;
+			case KOGGE:			s = "Kogge";
+								break;
+			case HOLK:			s = "Holk";
+								break;
+			case KRAWEEL:		s = "Kraweel";
+								break;
+			case KARACKE:		s = "Karacke";
+								break;
+			case LINIENSCHIFF:	s = "Linienschiff";
+								break;
+		}
+		
+		return s;
+	}
+	
+	public void verschleiss(int prozent)
+	{
+		this.zustand -= prozent;
+		if(this.zustand < 0)
+			zustand = 0;
+	}
+	
+	public String toString()
+	{
+		
+		String s = "Schiffstyp: " + getTypString(this.schiffstyp) + "\n"
+					+ "Zustand: " + this.zustand + "\n"
+					+ "Kapazität: " + this.max_kapazitaet + "\n";
+		
+		return s;
 	}
 }
