@@ -15,7 +15,7 @@ Klasse Schiff : jwenner
 
 Klasse ListeSchiff
 
-Klasse Kontor
+Klasse Kontor : eemiri
 
 Klasse ListeKontor
 
