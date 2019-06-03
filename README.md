@@ -11,7 +11,7 @@ Klasse Ware
 
 Klasse Lager
 
-Klasse Schiff
+Klasse Schiff : jwenner
 
 Klasse ListeSchiff
 
