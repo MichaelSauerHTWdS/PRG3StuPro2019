@@ -1,8 +1,3 @@
-/**
-*@author Zoubair Khoulaidi
-*@Date 03.06.2019
-*/
-
 package lager;
 
 import java.util.ArrayList;
@@ -66,7 +61,13 @@ public class Lager {
 		
 	}
 	public String toString() {
-		return "Lager";
+		String s = "";
+		
+		s += "Lager ID: " + this.id + "\nName: " + this.name;
+		for(Ware w : waren)
+			s += "\n"+ w.toString();
+		
+		return s;
 	}
 	
 }
