@@ -9,7 +9,7 @@ Klasse Konto
 
 Klasse Ware: phbarth
 
-Klasse Lager
+Klasse Lager: zkhoulaidi
 
 Klasse Schiff : jwenner
 
