@@ -7,7 +7,7 @@ Eine explizite Aufgabenverteilung unter den Beteiligten ist dabei nicht vorgeseh
 
 Klasse Konto
 
-Klasse Ware : phbarth
+Klasse Ware: zkhoulaidi
 
 Klasse Lager
 
