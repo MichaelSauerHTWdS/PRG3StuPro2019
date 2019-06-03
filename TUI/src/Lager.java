@@ -13,13 +13,33 @@ import ware.Ware;
 public class Lager {
 
 	private int id;
+	private String name;
 	private List<Ware> waren;
+	
+	Lager(){
+		this.id = 0;
+		this.name = "";
+		waren = new ArrayList<Ware>();
+		}
+	
+	Lager(int id, String name){
+		this.id = id;
+		this.name = name;
+		waren = new ArrayList<Ware>();
+	}
 	
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public List<Ware> getWaren() {
@@ -46,8 +66,7 @@ public class Lager {
 		
 	}
 	public String toString() {
-		return "";
+		return "Lager";
 	}
 	
 }
-
