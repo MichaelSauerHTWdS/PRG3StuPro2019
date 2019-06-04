@@ -53,7 +53,7 @@ public class Lager {
 	public boolean add_Ware(Ware ware) {
         if(istVorhanden(ware))
         {
-            System.out.println("ist schon Vorhanden"); // ich mache Exceptions später
+            System.out.println("ist schon vorhanden); // ich mache Exceptions später
             return false;
         }
         else
@@ -66,17 +66,16 @@ public class Lager {
         return true;
 	}
 	public boolean update_Ware(Ware ware, Ware ware_update) {
-        for(Ware w : waren)
-        {
-            if(istVorhanden(ware)){
-                ware.setName(ware_update.getName);  // muss wissen welche Attributen in WarenKlasse da sind...
-            }
+       
+        if(istVorhanden(ware)){
+            ware.setName(ware_update.getName);  // muss wissen welche Attributen in WarenKlasse da sind...
+            return true;
         }
-		return true;
+		return false;
 	}
 	public boolean Delete_Ware(Ware ware) {
         if(!istVorhanden(ware)){
-            System.out.println("Ware ist nicht Vorhanden"); // ich mache Exceptions später
+            System.out.println("Ware ist nicht vorhanden"); // ich mache Exceptions später
             return false;
         }
         else{
@@ -94,7 +93,7 @@ public class Lager {
             System.out.println("Ware ist vorhanden");
             return ware.toString();
         }
-        return "Ware ist icht Vorhanden";
+        return "Ware ist icht vorhanden;
 	}
     
     public boolean istVorhanden(Ware ware){
