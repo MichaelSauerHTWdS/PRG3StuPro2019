@@ -1,3 +1,9 @@
+/**
+ *@author Zoubair Khoulaidi
+ *@date 03.06.2019
+ *@name Lager Klasse
+ */
+
 package lager;
 
 import java.util.ArrayList;
@@ -45,21 +51,60 @@ public class Lager {
 	}
 	
 	public boolean add_Ware(Ware ware) {
-		
-		return true;
+        if(istVorhanden(ware))
+        {
+            System.out.println("ist schon Vorhanden"); // ich mache Exceptions später
+            return false;
+        }
+        else
+        {
+            if(waren.add(ware))
+                System.out.println("Ware added");
+            else
+                return false;
+        }
+        return true;
 	}
-	public boolean update_Ware(Ware ware) {
-		
+	public boolean update_Ware(Ware ware, Ware ware_update) {
+        for(Ware w : waren)
+        {
+            if(istVorhanden(ware)){
+                ware.setName(ware_update.getName);  // muss wissen welche Attributen in WarenKlasse da sind...
+            }
+        }
 		return true;
 	}
 	public boolean Delete_Ware(Ware ware) {
-		
-		return true;
+        if(!istVorhanden(ware)){
+            System.out.println("Ware ist nicht Vorhanden"); // ich mache Exceptions später
+            return false;
+        }
+        else{
+            if(waren.remove(ware))
+                System.out.println("Ware deleted");
+            else
+                return false;
+        }
+        return true;
 	}
 	
-	public void search_Ware(Ware ware) {
-		
+	public String search_Ware(Ware ware) {
+		if(istVorhanden(ware))
+        {
+            System.out.println("Ware ist vorhanden");
+            return ware.toString();
+        }
+        return "Ware ist icht Vorhanden";
 	}
+    
+    public boolean istVorhanden(Ware ware){
+        for(Ware w: waren)
+        {
+            if(w.getId == ware.getId)
+                return true;
+        }
+        return false;
+    }
 	public String toString() {
 		String s = "";
 		
